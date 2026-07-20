@@ -45,13 +45,13 @@ const iconMap = {
 <section id="features" class="border-b border-border py-20 md:py-28">
   <div class="mx-auto max-w-6xl px-6">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Everything you need to run your dealership</h2>
+      <h2 class="text-3xl font-bold tracking-tight md:text-4xl" style="font-family: var(--font-display)">Everything you need to run your dealership</h2>
       <p class="mt-4 text-lg text-text-secondary">Sales floor to back office. One platform.</p>
     </div>
     <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         features.map((feature) => (
-          <div class="group rounded-xl border border-border p-6 transition-all hover:border-brand-200 hover:shadow-sm">
+          <div class="group rounded-xl border border-border bg-white p-6 transition-all hover:border-brand-200 hover:shadow-sm">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-100">
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d={iconMap[feature.icon]} />

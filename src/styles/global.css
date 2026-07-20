@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "DM Sans", "Inter", system-ui, sans-serif;
 
   --color-brand-50: #eef2ff;
   --color-brand-100: #e0e7ff;
@@ -14,11 +15,19 @@
   --color-brand-800: #3730a3;
   --color-brand-900: #312e81;
 
-  --color-surface: #ffffff;
-  --color-muted: #f8fafc;
-  --color-border: #e2e8f0;
-  --color-text: #0f172a;
-  --color-text-secondary: #475569;
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+
+  --color-surface: #faf9f6;
+  --color-muted: #f5f3ef;
+  --color-border: #e5e0d6;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #6b6560;
 }
 
 html {
