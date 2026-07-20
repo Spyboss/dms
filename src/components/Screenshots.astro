@@ -4,22 +4,22 @@ const screenshots = [
   {
     title: 'Dashboard',
     description: 'Sales, inventory, and pending actions at a glance.',
-    src: `${base}/c_fill,g_auto,w_640,h_400,f_auto,q_auto/v1784533119/FireShot_Capture_029_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_ob8vws.png`,
+    src: `${base}/w_640,f_auto,q_auto/v1784533119/FireShot_Capture_029_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_ob8vws.png`,
   },
   {
     title: 'Billing',
     description: 'Create bills and export PDFs with inventory integration.',
-    src: `${base}/c_fill,g_auto,w_640,h_400,f_auto,q_auto/v1784533161/FireShot_Capture_030_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_czv5ll.png`,
+    src: `${base}/w_640,f_auto,q_auto/v1784533161/FireShot_Capture_030_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_czv5ll.png`,
   },
   {
     title: 'Inventory',
     description: 'Track each unit. Real-time status and batch operations.',
-    src: `${base}/c_fill,g_auto,w_640,h_400,f_auto,q_auto/v1784533196/FireShot_Capture_031_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_qfy8po.png`,
+    src: `${base}/w_640,f_auto,q_auto/v1784533196/FireShot_Capture_031_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_qfy8po.png`,
   },
   {
     title: 'Quotations',
     description: 'Multi-line quotes with discounts and insurance fields.',
-    src: `${base}/c_fill,g_auto,w_640,h_400,f_auto,q_auto/v1784533230/FireShot_Capture_032_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_xhqk2t.png`,
+    src: `${base}/w_640,f_auto,q_auto/v1784533230/FireShot_Capture_032_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_xhqk2t.png`,
   },
 ];
 ---
@@ -35,7 +35,7 @@ const screenshots = [
         screenshots.map((shot) => (
           <div class="group overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all hover:shadow-md">
             <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-slate-50 to-gray-100">
-              <img src={shot.src} alt={shot.title} class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
+              <img src={shot.src} alt={shot.title} class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105" loading="lazy" />
             </div>
             <div class="p-5">
               <h3 class="font-semibold">{shot.title}</h3>
