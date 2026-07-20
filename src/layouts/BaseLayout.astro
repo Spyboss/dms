@@ -4,9 +4,32 @@ import '../styles/global.css';
 export interface Props {
   title?: string;
   description?: string;
+  canonical?: string;
+  ogImage?: string;
 }
 
-const { title = 'UHADEV DMS — Dealership Management System', description = 'Billing, inventory, quotations, and warranty management for Sri Lankan motorcycle dealerships.' } = Astro.props;
+const { title = 'UHADEV DMS — Dealership Management System', description = 'Billing, inventory, quotations, and warranty management for Sri Lankan motorcycle dealerships.', canonical = 'https://dms.uhadev.com', ogImage = 'https://res.cloudinary.com/dthx4fxte/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1781005667/FireShot_Capture_022_-_TMR_Trading_Lanka_Pvt_Ltd_-_tmr-tradinglanka.pages.dev_tgv1j6.png' } = Astro.props;
+
+const structuredData = `<script type="application/ld+json">${JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "UHADEV DMS",
+  "description": description,
+  "url": "https://dms.uhadev.com",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "browserRequirements": "Modern browser required",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "UHADEV",
+    "url": "https://uhadev.com"
+  }
+})}</script>`;
 ---
 
 <!doctype html>
@@ -16,6 +39,7 @@ const { title = 'UHADEV DMS — Dealership Management System', description = 'Bi
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -28,8 +52,15 @@ const { title = 'UHADEV DMS — Dealership Management System', description = 'Bi
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dms.uhadev.com" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <Fragment set:html={structuredData} />
   </head>
   <body class="bg-surface text-text">
     <slot />
